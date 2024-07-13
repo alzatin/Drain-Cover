@@ -1095,7 +1095,8 @@
                     "ap2ID": 1720850562624
                 }
             ],
-            "fileTypeVersion": 1
+            "fileTypeVersion": 1,
+            "compiledBom": []
         },
         {
             "atomType": "Difference",
