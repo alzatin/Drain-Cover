@@ -919,24 +919,69 @@
                 {
                     "atomType": "Code",
                     "name": "Code",
-                    "x": 0.2394179894179894,
-                    "y": 0.4902506963788301,
+                    "x": 0.335978835978836,
+                    "y": 0.4874651810584958,
                     "uniqueID": 1720831861423,
                     "ioValues": [
                         {
-                            "name": "input1",
-                            "ioValue": 10
+                            "name": "shape",
+                            "ioValue": 1720832018119
                         },
                         {
-                            "name": "height",
+                            "name": "MaxDist",
                             "ioValue": 10
                         }
                     ],
                     "codeVersion": 1,
-                    "code": "//Inputs:[input1, height];\n\nlet shape = drawRectangle(5,7)\n\nconst newPlane = new Plane().pivot(0, 'Y');\n\n return { geometry: [shape.sketchOnPlane(newPlane).extrude(7)], tags: [],\n      color: '#A3CE5B',\n      plane: newPlane}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+                    "code": "//Inputs:[shape, MaxDist];\n\nlet finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\nreturn {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.08994708994708996,
+                    "y": 0.6323119777158774,
+                    "uniqueID": 1720832010950,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 3
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.22552910052910055,
+                    "y": 0.4512534818941504,
+                    "uniqueID": 1720832018119,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1720832010950
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 20
+                        }
+                    ]
                 }
             ],
-            "allConnectors": [],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1720832010950,
+                    "ap2ID": 1720832018119
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "shape",
+                    "ap2Primary": false,
+                    "ap1ID": 1720832018119,
+                    "ap2ID": 1720831861423
+                }
+            ],
             "fileTypeVersion": 1,
             "compiledBom": {}
         }
