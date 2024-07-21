@@ -643,6 +643,23 @@
             "uniqueID": 1721592425734,
             "ioValues": [],
             "fontFamily": "ROBOTO"
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.5527093596059113,
+            "y": 0.8206686930091185,
+            "uniqueID": 1721592972465,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1721592425734
+                },
+                {
+                    "name": "height",
+                    "ioValue": 10
+                }
+            ]
         }
     ],
     "allConnectors": [
@@ -701,6 +718,13 @@
             "ap2Primary": false,
             "ap1ID": 1720729464459,
             "ap2ID": 1720729641050
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1721592425734,
+            "ap2ID": 1721592972465
         }
     ],
     "unitsKey": "MM",
