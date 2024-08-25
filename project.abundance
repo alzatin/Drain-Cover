@@ -1,6 +1,6 @@
 {
     "atomType": "Molecule",
-    "name": "Drain Cover",
+    "name": "Drain-Cover",
     "x": 0,
     "y": 0,
     "uniqueID": 1720729025081,
@@ -13,12 +13,7 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": 1720729034831,
-            "ioValues": [
-                {
-                    "name": "number or geometry",
-                    "ioValue": 1720729319138
-                }
-            ]
+            "ioValues": []
         },
         {
             "atomType": "Molecule",
@@ -35,12 +30,7 @@
                     "x": 0.98,
                     "y": 0.5,
                     "uniqueID": 1720729045133,
-                    "ioValues": [
-                        {
-                            "name": "number or geometry",
-                            "ioValue": 1720729131832
-                        }
-                    ]
+                    "ioValues": []
                 },
                 {
                     "atomType": "Circle",
@@ -560,8 +550,8 @@
         {
             "atomType": "Molecule",
             "name": "Top",
-            "x": 0.19378306878306878,
-            "y": 0.7381615598885795,
+            "x": 0.18386243386243387,
+            "y": 0.649025069637883,
             "uniqueID": 1720729068656,
             "ioValues": [],
             "topLevel": false,
@@ -572,12 +562,7 @@
                     "x": 0.98,
                     "y": 0.5,
                     "uniqueID": 1720729068646,
-                    "ioValues": [
-                        {
-                            "name": "number or geometry",
-                            "ioValue": 1720729620415
-                        }
-                    ]
+                    "ioValues": []
                 },
                 {
                     "atomType": "Circle",
@@ -882,232 +867,24 @@
                 {
                     "name": "geometry",
                     "ioValue": 1720729464459
-                }
-            ]
-        },
-        {
-            "atomType": "Molecule",
-            "name": "Random Angle Cuts",
-            "x": 0.29365079365079366,
-            "y": 0.8551532033426184,
-            "uniqueID": 1720831847876,
-            "ioValues": [],
-            "topLevel": false,
-            "allAtoms": [
-                {
-                    "atomType": "Output",
-                    "name": "Output",
-                    "x": 0.98,
-                    "y": 0.5,
-                    "uniqueID": 1720831847672,
-                    "ioValues": [
-                        {
-                            "name": "number or geometry",
-                            "ioValue": 1720850562624
-                        }
-                    ]
                 },
                 {
-                    "atomType": "Code",
-                    "name": "Code",
-                    "x": 0.36706349206349204,
-                    "y": 0.5041782729805014,
-                    "uniqueID": 1720831861423,
-                    "ioValues": [
-                        {
-                            "name": "shape",
-                            "ioValue": 1720832018119
-                        },
-                        {
-                            "name": "MaxDist",
-                            "ioValue": 10
-                        }
-                    ],
-                    "codeVersion": 1,
-                    "code": "//Inputs:[shape, MaxDist];\n\nlet finalShape = library[shape].geometry[0].clone.translate[MaxDist,0,0]\n\nreturn {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+                    "name": "Resolution (dpi)",
+                    "ioValue": 72
                 },
                 {
-                    "atomType": "Circle",
-                    "name": "Circle",
-                    "x": 0.07275132275132275,
-                    "y": 0.45403899721448465,
-                    "uniqueID": 1720832010950,
-                    "ioValues": [
-                        {
-                            "name": "diameter",
-                            "ioValue": 3
-                        }
-                    ]
+                    "name": "Part Name",
+                    "ioValue": "Part Name"
                 },
                 {
-                    "atomType": "Extrude",
-                    "name": "Extrude",
-                    "x": 0.2195767195767196,
-                    "y": 0.415041782729805,
-                    "uniqueID": 1720832018119,
-                    "ioValues": [
-                        {
-                            "name": "geometry",
-                            "ioValue": 1720832010950
-                        },
-                        {
-                            "name": "height",
-                            "ioValue": 20
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Code",
-                    "name": "Code",
-                    "x": 0.36574074074074076,
-                    "y": 0.7604456824512534,
-                    "uniqueID": 1720832106253,
-                    "ioValues": [
-                        {
-                            "name": "input1",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "height",
-                            "ioValue": 10
-                        }
-                    ],
-                    "codeVersion": 1,
-                    "code": "//Inputs:[input1, height];\n\nlet shape = drawCircle(1.5)\n\nconst newPlane = new Plane().pivot(45, 'Y')\n\nlet fusedShape = shape.sketchOnPlane(newPlane).extrude(100)\n\nfunction rand(min, max) {\n  return Math.random() * (max - min) + min;\n}\n\n\nfor (let i = 0; i < 30; i++) {\n  let newPlane2 = new Plane().pivot(45, 'Y').pivot(rand(0,360), 'Z')\n\n  let radiusIsh = 20\n  let nextShape = shape.sketchOnPlane(newPlane2).extrude(100).translate(rand(-1*radiusIsh,radiusIsh), rand(-1*radiusIsh,radiusIsh), 0)\n\n  fusedShape = fusedShape.fuse(nextShape);\n  \n} \n\n\n return { geometry: [fusedShape], tags: [],\n      color: '#A3CE5B',\n      plane: newPlane,\n      bom: []}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
-                },
-                {
-                    "atomType": "Rotate",
-                    "name": "Rotate",
-                    "x": 0.5317460317460317,
-                    "y": 0.3955431754874652,
-                    "uniqueID": 1720850530357,
-                    "ioValues": [
-                        {
-                            "name": "geometry",
-                            "ioValue": 1720832106253
-                        },
-                        {
-                            "name": "x-axis degrees",
-                            "ioValue": 0
-                        },
-                        {
-                            "name": "y-axis degrees",
-                            "ioValue": 0
-                        },
-                        {
-                            "name": "z-axis degrees",
-                            "ioValue": 36
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Rotate",
-                    "name": "Rotate",
-                    "x": 0.5601851851851851,
-                    "y": 0.818941504178273,
-                    "uniqueID": 1720850545485,
-                    "ioValues": [
-                        {
-                            "name": "geometry",
-                            "ioValue": 1720832106253
-                        },
-                        {
-                            "name": "x-axis degrees",
-                            "ioValue": 0
-                        },
-                        {
-                            "name": "y-axis degrees",
-                            "ioValue": 0
-                        },
-                        {
-                            "name": "z-axis degrees",
-                            "ioValue": -50
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Join",
-                    "name": "Fusion",
-                    "x": 0.6957671957671957,
-                    "y": 0.4958217270194986,
-                    "uniqueID": 1720850562624,
-                    "ioValues": [
-                        {
-                            "name": "3D shape 1",
-                            "ioValue": 1720850545485
-                        },
-                        {
-                            "name": "3D shape 2",
-                            "ioValue": 1720832106253
-                        },
-                        {
-                            "name": "3D shape 3",
-                            "ioValue": 1720850530357
-                        }
-                    ],
-                    "unionType": "Fusion"
+                    "name": "File Type",
+                    "ioValue": "SVG"
                 }
             ],
-            "allConnectors": [
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
-                    "ap1ID": 1720832010950,
-                    "ap2ID": 1720832018119
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "shape",
-                    "ap2Primary": false,
-                    "ap1ID": 1720832018119,
-                    "ap2ID": 1720831861423
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
-                    "ap1ID": 1720832106253,
-                    "ap2ID": 1720850530357
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
-                    "ap1ID": 1720832106253,
-                    "ap2ID": 1720850545485
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "3D shape 2",
-                    "ap2Primary": false,
-                    "ap1ID": 1720832106253,
-                    "ap2ID": 1720850562624
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "3D shape 3",
-                    "ap2Primary": false,
-                    "ap1ID": 1720850530357,
-                    "ap2ID": 1720850562624
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "3D shape 1",
-                    "ap2Primary": false,
-                    "ap1ID": 1720850545485,
-                    "ap2ID": 1720850562624
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "number or geometry",
-                    "ap2Primary": false,
-                    "ap1ID": 1720850562624,
-                    "ap2ID": 1720831847672
-                }
-            ],
-            "fileTypeVersion": 1,
-            "compiledBom": []
+            "type": null,
+            "resolution": 72,
+            "importIndex": 0,
+            "fileName": null
         },
         {
             "atomType": "Difference",
@@ -1117,14 +894,82 @@
             "uniqueID": 1720832262161,
             "ioValues": [
                 {
-                    "name": "geometry2",
-                    "ioValue": 1720831847876
-                },
-                {
                     "name": "geometry1",
                     "ioValue": 1720729068656
                 }
             ]
+        },
+        {
+            "atomType": "Molecule",
+            "name": "Center Vent",
+            "x": 0.24537037037037038,
+            "y": 0.8523676880222841,
+            "uniqueID": 1724601111085,
+            "ioValues": [],
+            "topLevel": false,
+            "allAtoms": [
+                {
+                    "atomType": "Output",
+                    "name": "Output",
+                    "x": 0.98,
+                    "y": 0.5,
+                    "uniqueID": 1724601110749,
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": ""
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.23412698412698413,
+                    "y": 0.41225626740947074,
+                    "uniqueID": 1724601120386,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 10
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.498015873015873,
+                    "y": 0.4958217270194986,
+                    "uniqueID": 1724601128367,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1724601120386
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 10
+                        }
+                    ]
+                }
+            ],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1724601120386,
+                    "ap2ID": 1724601128367
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 1724601128367,
+                    "ap2ID": 1724601110749
+                }
+            ],
+            "fileTypeVersion": 1,
+            "compiledBom": {}
         }
     ],
     "allConnectors": [
@@ -1185,18 +1030,18 @@
             "ap2ID": 1720729641050
         },
         {
-            "ap1Name": "Geometry",
-            "ap2Name": "geometry2",
-            "ap2Primary": false,
-            "ap1ID": 1720831847876,
-            "ap2ID": 1720832262161
-        },
-        {
             "ap1Name": "geometry",
             "ap2Name": "3D shape 6",
             "ap2Primary": false,
             "ap1ID": 1720832262161,
             "ap2ID": 1720729319138
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry2",
+            "ap2Primary": false,
+            "ap1ID": 1724601111085,
+            "ap2ID": 1720832262161
         }
     ],
     "unitsKey": "MM",
