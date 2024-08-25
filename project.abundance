@@ -560,8 +560,8 @@
         {
             "atomType": "Molecule",
             "name": "Top",
-            "x": 0.18386243386243387,
-            "y": 0.649025069637883,
+            "x": 0.1779100529100529,
+            "y": 0.67966573816156,
             "uniqueID": 1720729068656,
             "ioValues": [],
             "topLevel": false,
@@ -575,7 +575,7 @@
                     "ioValues": [
                         {
                             "name": "number or geometry",
-                            "ioValue": 1724601785253
+                            "ioValue": 1720729408423
                         }
                     ]
                 },
@@ -635,7 +635,7 @@
                     "ioValues": [
                         {
                             "name": "geometry",
-                            "ioValue": ""
+                            "ioValue": 1724601940425
                         },
                         {
                             "name": "xDist",
@@ -865,30 +865,30 @@
                             "uniqueID": 1724601740277,
                             "ioValues": [
                                 {
-                                    "name": "3D shape 1",
+                                    "name": "3D shape 5",
                                     "ioValue": 1724601694046
                                 },
                                 {
-                                    "name": "3D shape 2",
-                                    "ioValue": 1724601659086
+                                    "name": "3D shape 6",
+                                    "ioValue": 1724601889146
                                 }
                             ],
                             "unionType": "Assembly"
                         },
                         {
                             "atomType": "Tag",
-                            "name": "Add Tag",
+                            "name": "Plastic",
                             "x": 0.6613756613756614,
                             "y": 0.2618384401114206,
                             "uniqueID": 1724601889146,
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": ""
+                                    "ioValue": 1724601659086
                                 }
                             ],
                             "tags": [
-                                ""
+                                "Plastic"
                             ],
                             "cutTag": false
                         }
@@ -945,15 +945,14 @@
                         },
                         {
                             "ap1Name": "geometry",
-                            "ap2Name": "3D shape 2",
-                            "ap2Primary": false,
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
                             "ap1ID": 1724601659086,
-                            "ap2ID": 1724601740277
+                            "ap2ID": 1724601889146
                         },
-                        null,
                         {
                             "ap1Name": "geometry",
-                            "ap2Name": "3D shape 1",
+                            "ap2Name": "3D shape 5",
                             "ap2Primary": false,
                             "ap1ID": 1724601694046,
                             "ap2ID": 1724601740277
@@ -964,6 +963,13 @@
                             "ap2Primary": false,
                             "ap1ID": 1724601740277,
                             "ap2ID": 1724601273919
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "3D shape 6",
+                            "ap2Primary": false,
+                            "ap1ID": 1724601889146,
+                            "ap2ID": 1724601740277
                         }
                     ],
                     "fileTypeVersion": 1,
@@ -986,6 +992,21 @@
                         }
                     ],
                     "unionType": "Assembly"
+                },
+                {
+                    "atomType": "ExtractTag",
+                    "name": "Extract Tag",
+                    "x": 0.7003968253968255,
+                    "y": 0.766016713091922,
+                    "uniqueID": 1724601940425,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1724601785253
+                        }
+                    ],
+                    "tag": "Plastic",
+                    "tagIndex": 0
                 }
             ],
             "allConnectors": [
@@ -1011,6 +1032,13 @@
                     "ap2ID": 1724601785253
                 },
                 {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 1720729408423,
+                    "ap2ID": 1720729068646
+                },
+                {
                     "ap1Name": "Geometry",
                     "ap2Name": "3D shape 3",
                     "ap2Primary": false,
@@ -1019,14 +1047,20 @@
                 },
                 {
                     "ap1Name": "geometry",
-                    "ap2Name": "number or geometry",
-                    "ap2Primary": false,
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
                     "ap1ID": 1724601785253,
-                    "ap2ID": 1720729068646
+                    "ap2ID": 1724601940425
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1724601940425,
+                    "ap2ID": 1720729408423
                 }
             ],
-            "fileTypeVersion": 1,
-            "compiledBom": []
+            "fileTypeVersion": 1
         },
         {
             "atomType": "Move",
