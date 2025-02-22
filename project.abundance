@@ -1897,6 +1897,20 @@
             "resolution": 72,
             "importIndex": 0,
             "fileName": null
+        },
+        {
+            "atomType": "Circle",
+            "name": "Circle",
+            "x": 0.6999109528049866,
+            "y": 0.30919220055710306,
+            "uniqueID": 1740202752454,
+            "ioValues": [
+                {
+                    "name": "diameter",
+                    "ioValue": 10
+                }
+            ],
+            "description": "Creates a new circle."
         }
     ],
     "allConnectors": [
