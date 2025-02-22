@@ -25,8 +25,8 @@
         {
             "atomType": "Molecule",
             "name": "Bolt",
-            "x": 0.1865079365079365,
-            "y": 0.37047353760445684,
+            "x": 0.188780053428317,
+            "y": 0.403899721448468,
             "uniqueID": 1720729044624,
             "ioValues": [],
             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -97,10 +97,10 @@
                     "cutTag": false
                 },
                 {
-                    "atomType": "Join",
+                    "atomType": "Assembly",
                     "name": "Assembly",
-                    "x": 0.7242063492063492,
-                    "y": 0.3983286908077995,
+                    "x": 0.8210151380231523,
+                    "y": 0.20055710306406688,
                     "uniqueID": 1720729131832,
                     "ioValues": [
                         {
@@ -148,10 +148,10 @@
                     "description": "Extrudes a 2D shape. Input can be negitive. "
                 },
                 {
-                    "atomType": "Join",
+                    "atomType": "Fusion",
                     "name": "Fusion",
-                    "x": 0.3637566137566138,
-                    "y": 0.7103064066852367,
+                    "x": 0.37043633125556547,
+                    "y": 0.7353760445682451,
                     "uniqueID": 1720729187479,
                     "ioValues": [
                         {
@@ -184,8 +184,8 @@
                 {
                     "atomType": "Rotate",
                     "name": "Rotate",
-                    "x": 0.5866402116402116,
-                    "y": 0.7437325905292479,
+                    "x": 0.5966162065894924,
+                    "y": 0.5598885793871866,
                     "uniqueID": 1720729218164,
                     "ioValues": [
                         {
@@ -210,13 +210,13 @@
                 {
                     "atomType": "Move",
                     "name": "Move",
-                    "x": 0.6613756613756614,
-                    "y": 0.7910863509749304,
+                    "x": 0.804986642920748,
+                    "y": 0.4902506963788301,
                     "uniqueID": 1720729232349,
                     "ioValues": [
                         {
                             "name": "geometry",
-                            "ioValue": 1720729218164
+                            "ioValue": 1740202495300
                         },
                         {
                             "name": "xDist",
@@ -228,7 +228,7 @@
                         },
                         {
                             "name": "zDist",
-                            "ioValue": 14
+                            "ioValue": 12
                         }
                     ],
                     "description": "Moves a shape laterally in X, Y, Z."
@@ -494,10 +494,74 @@
                             "ap2ID": 1720831697903
                         }
                     ],
-                    "gitHubUniqueID": 828039015,
                     "unitsKey": "MM",
                     "fileTypeVersion": 1,
                     "compiledBom": []
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.5325022261798753,
+                    "y": 0.9247910863509751,
+                    "uniqueID": 1740202455741,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 10
+                        }
+                    ],
+                    "description": "Creates a new circle."
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.6304541406945681,
+                    "y": 0.883008356545961,
+                    "uniqueID": 1740202466806,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1740202455741
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 5
+                        }
+                    ],
+                    "description": "Extrudes a 2D shape. Input can be negitive. "
+                },
+                {
+                    "atomType": "Color",
+                    "name": "Color",
+                    "x": 0.7595725734639358,
+                    "y": 0.8467966573816156,
+                    "uniqueID": 1740202475685,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1740202466806
+                        }
+                    ],
+                    "description": "Changes the color of the shape.",
+                    "selectedColorIndex": 22
+                },
+                {
+                    "atomType": "Assembly",
+                    "name": "Assembly",
+                    "x": 0.8477292965271593,
+                    "y": 0.7381615598885795,
+                    "uniqueID": 1740202495300,
+                    "ioValues": [
+                        {
+                            "name": "Shape 1",
+                            "ioValue": 1720729218164
+                        },
+                        {
+                            "name": "Shape 2",
+                            "ioValue": 1740202475685
+                        }
+                    ],
+                    "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
                 }
             ],
             "allConnectors": [
@@ -559,10 +623,10 @@
                 },
                 {
                     "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
+                    "ap2Name": "Shape 1",
+                    "ap2Primary": false,
                     "ap1ID": 1720729218164,
-                    "ap2ID": 1720729232349
+                    "ap2ID": 1740202495300
                 },
                 {
                     "ap1Name": "geometry",
@@ -577,6 +641,34 @@
                     "ap2Primary": false,
                     "ap1ID": 1720831697710,
                     "ap2ID": 1720729187479
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1740202455741,
+                    "ap2ID": 1740202466806
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1740202466806,
+                    "ap2ID": 1740202475685
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 2",
+                    "ap2Primary": false,
+                    "ap1ID": 1740202475685,
+                    "ap2ID": 1740202495300
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1740202495300,
+                    "ap2ID": 1720729232349
                 }
             ],
             "fileTypeVersion": 1,
@@ -900,7 +992,7 @@
                             "selectedColorIndex": 21
                         },
                         {
-                            "atomType": "Join",
+                            "atomType": "Assembly",
                             "name": "Assembly",
                             "x": 0.748015873015873,
                             "y": 0.5403899721448467,
@@ -1047,7 +1139,7 @@
                     "compiledBom": []
                 },
                 {
-                    "atomType": "Join",
+                    "atomType": "Assembly",
                     "name": "Assembly",
                     "x": 0.5482804232804233,
                     "y": 0.5013927576601671,
@@ -1250,7 +1342,7 @@
                             "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
                         },
                         {
-                            "atomType": "Join",
+                            "atomType": "Fusion",
                             "name": "Fusion",
                             "x": 0.6686507936507937,
                             "y": 0.2618384401114206,
@@ -1459,7 +1551,7 @@
                             "description": "Moves a shape laterally in X, Y, Z."
                         },
                         {
-                            "atomType": "Join",
+                            "atomType": "Fusion",
                             "name": "Fusion",
                             "x": 0.34854497354497355,
                             "y": 0.4682080924855491,
@@ -1688,8 +1780,8 @@
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.36177248677248675,
-            "y": 0.4317548746518106,
+            "x": 0.3677649154051647,
+            "y": 0.43732590529247906,
             "uniqueID": 1720729287380,
             "ioValues": [
                 {
@@ -1714,8 +1806,8 @@
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.36177248677248675,
-            "y": 0.1894150417827298,
+            "x": 0.3579697239536955,
+            "y": 0.1977715877437326,
             "uniqueID": 1720729304084,
             "ioValues": [
                 {
@@ -1738,7 +1830,7 @@
             "description": "Moves a shape laterally in X, Y, Z."
         },
         {
-            "atomType": "Join",
+            "atomType": "Assembly",
             "name": "Assembly",
             "x": 0.5264550264550264,
             "y": 0.42618384401114207,
@@ -1793,7 +1885,7 @@
                 },
                 {
                     "name": "Part Name",
-                    "ioValue": "Part Name"
+                    "ioValue": "Drain Cover"
                 },
                 {
                     "name": "File Type",
