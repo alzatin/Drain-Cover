@@ -1865,8 +1865,7 @@
                 }
             ],
             "description": "Extracts geometry containing the specified tag.",
-            "tag": "Plastic",
-            "tagIndex": 1
+            "tagIndex": 0
         },
         {
             "atomType": "Export",
