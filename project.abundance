@@ -313,8 +313,8 @@
     {
       "atomType": "Export",
       "name": "Export",
-      "x": 0.7308201058201058,
-      "y": 0.7883008356545962,
+      "x": 0.7566137566137566,
+      "y": 0.649025069637883,
       "uniqueID": 1720729641050,
       "ioValues": [
         {
@@ -1484,8 +1484,8 @@
     {
       "atomType": "Molecule",
       "name": "Top",
-      "x": 0.1798941798941799,
-      "y": 0.6935933147632313,
+      "x": 0.18386243386243387,
+      "y": 0.6685236768802229,
       "uniqueID": 1720729068656,
       "ioValues": [],
       "topLevel": false,
@@ -3008,6 +3008,364 @@
       ],
       "fileTypeVersion": 1,
       "compiledBom": []
+    },
+    {
+      "atomType": "Fusion",
+      "name": "Fusion",
+      "x": 0.707010582010582,
+      "y": 0.871866295264624,
+      "uniqueID": "edb0ebbb-06e1-451d-a23d-90dc3eb4b76b",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": {
+            "geometry": [
+              {
+                "geometry": [
+                  {
+                    "geometry": [
+                      {
+                        "geometry": "cut-c06264551b6a8801afd542c3a004cd48cb5815d1389c5ad8ba481397d1ec6250",
+                        "tags": [],
+                        "bom": [],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "color": "#aad7f2",
+                        "dimension": "3D"
+                      }
+                    ],
+                    "tags": [
+                      "Plastic"
+                    ],
+                    "bom": [],
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "color": "#aad7f2"
+                  },
+                  {
+                    "geometry": [
+                      {
+                        "geometry": "move-83357ffc6cc905834a8d894d98536c4df1a4e3a636fba93eb61a8853c3021804",
+                        "dimension": "3D",
+                        "tags": [
+                          "Plastic"
+                        ],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "color": "#aad7f2",
+                        "bom": []
+                      }
+                    ],
+                    "tags": [],
+                    "bom": [],
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "color": "#aad7f2"
+                  }
+                ],
+                "tags": [],
+                "bom": [],
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2"
+              },
+              {
+                "geometry": [
+                  {
+                    "geometry": [
+                      {
+                        "geometry": "expand-c44722108ae0956fe240eece60a631c4c5e2758ced290ef202155a64d6b02ba2",
+                        "tags": [],
+                        "color": "#aad7f2",
+                        "bom": [],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "dimension": "3D"
+                      },
+                      {
+                        "geometry": "expand-cce2d5d0dc287d2a41a8cb458e661d1200d3d868ed349e6d448978d3cb9c6cec",
+                        "tags": [],
+                        "color": "#aad7f2",
+                        "bom": [],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "dimension": "3D"
+                      }
+                    ],
+                    "tags": [],
+                    "color": "#aad7f2",
+                    "bom": [],
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    }
+                  }
+                ],
+                "tags": [
+                  "Plastic"
+                ],
+                "bom": [],
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2"
+              },
+              {
+                "geometry": [
+                  {
+                    "geometry": [
+                      {
+                        "geometry": "expand-b738fb4f638b24a13777e95e23d9d27ef6a12961445ee44989275274da2a6eff",
+                        "tags": [],
+                        "color": "#aad7f2",
+                        "bom": [],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "dimension": "3D"
+                      },
+                      {
+                        "geometry": "expand-f1997564bf9ede54bd2cb855d089ca5805d01e8cad16e9e8f1be728e5402857e",
+                        "tags": [],
+                        "color": "#aad7f2",
+                        "bom": [],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "dimension": "3D"
+                      }
+                    ],
+                    "tags": [],
+                    "color": "#aad7f2",
+                    "bom": [],
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    }
+                  }
+                ],
+                "tags": [
+                  "Plastic"
+                ],
+                "bom": [],
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2"
+              }
+            ],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "tags": [],
+            "color": "#aad7f2",
+            "bom": [],
+            "dimension": "3D"
+          }
+        }
+      ],
+      "unionType": "Fusion"
     }
   ],
   "allConnectors": [
@@ -3040,6 +3398,12 @@
       "ap2Name": "geometry",
       "ap1ID": 1720729464459,
       "ap2ID": 1720729641050
+    },
+    {
+      "ap1Name": "output",
+      "ap2Name": "Shape 1",
+      "ap1ID": 1720729464459,
+      "ap2ID": "edb0ebbb-06e1-451d-a23d-90dc3eb4b76b"
     },
     {
       "ap1Name": "geometry or number",
